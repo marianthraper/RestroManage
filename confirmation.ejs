@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Saira Condensed' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'>
+    <title>Confirmation</title>
+    <style>
+        #container {
+            position: relative;
+            text-align: center;
+        }
+        #home {
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position: absolute;
+            top: 8px;
+            left: 900px
+        }
+        #abt {
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position: absolute;
+            top: 8px;
+            left: 850px;
+            right: 8px;
+        }
+        #book {
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+        body {
+            background-color: rgb(2, 2, 36);
+        }
+        #rname {
+            color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+            font-size: 70px;
+            text-align: center;
+        }
+        #desc {
+            color: rgb(226, 214, 161);
+            font-family: Papyrus;
+            font-size: 50px;
+            text-align: center;
+        }
+        #menu {
+            color: rgb(196, 122, 2);
+            background-color: rgb(2, 2, 36);
+            text-align: center;
+            font-family: 'Saira Condensed';
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="home"></div>
+        <div id="abt"></div>
+        <div id="book"></div>
+    </div>
+    <div id="icon"></div>
+    <div id="restname"></div>
+    <div>
+        <h2 id="rname">Your Reservation Details:</h2>
+        <p id="desc">Name: <%= reservation.name %></p>
+        <p id="desc">Phone Number: <%= reservation.phoneNumber %></p>
+        <p id="desc">Date: <%= reservation.date %></p>
+        <p id="desc">Time: <%= reservation.time %></p>
+        <p id="desc">Number of People: <%= reservation.numberOfPeople %></p>
+    </div>
+    <div id="descr"></div>
+    <div id="menu"></div>
+    <script type="text/babel">
+          class Icon extends React.Component {
+			render() {
+				return (
+					<>
+						<img src="logo-removebg-preview.png" width="150" height="150"/>
+					</>
+				)
+			}
+		}
+
+		class Restoname extends React.Component {
+			render() {
+				return (
+					<div>
+						<h2 id="rname">Your Reservation has been Confirmed!!!</h2>
+					</div>
+				);
+			}
+		}
+        class Desc extends React.Component {
+			render() {
+				return (
+					<div>
+						<p id="desc">Looking forward to dining with you</p>
+					</div>
+				);
+			}
+		}
+
+		class Headings2 extends React.Component {
+			render() {
+				return (
+					<div>
+						<h3>{this.props.text}</h3>
+					</div>
+				);
+			}
+		}
+        class Menu extends React.Component {
+			render() {
+				return (
+					<div>
+						<button id="menu">Go Back</button>
+					</div>
+				);
+			}
+		}
+
+        
+        ReactDOM.render(<Icon/>, document.getElementById("icon"));
+        ReactDOM.render(<Restoname />, document.getElementById("restname"));
+        ReactDOM.render(<Desc />, document.getElementById("descr"));
+        ReactDOM.render(<Headings2 text="Home" />, document.getElementById("home"));
+        ReactDOM.render(<Headings2 text="About Us" />, document.getElementById("abt"));
+        ReactDOM.render(<Headings2 text="Book Table" />, document.getElementById("book"));
+        ReactDOM.render(<Menu />, document.getElementById("menu"));
+    </script>
+</body>
+</html>

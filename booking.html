@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Saira Condensed' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'>
+	<title>booking</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<style>
+        #container {
+            position: relative;
+            text-align: center;
+        }
+        #home{
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position:absolute;
+            top:8px;
+            left:900px
+        }
+        #abt{
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position:absolute;
+            top:8px;
+            left:850px;
+            right:8px;
+        }
+        #book{
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position:absolute;
+            top: 8px;
+            right:16px;
+        }
+		#con{
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position:relative;
+            top: -60px;
+            left:330px;;
+        }
+		#pre{
+            color: rgb(226, 214, 161);
+            font-family: 'Saira Condensed';
+            position:relative;
+            top: -110px;
+            left:850px;;
+        }
+		 
+		#bookh{
+			color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+            position:absolute;
+            top:110px;
+			font-size: 20px;
+			left:590px;
+			text-align:center;
+		}
+		#chooseh{
+			color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+            position:absolute;
+            top:280px;
+			font-size: 20px;
+			left:570px;
+			text-align:center;
+		}
+        body{
+            background-color: rgb(2, 2, 36);
+        }
+        #namef{
+            color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+            font-size: 20px;
+			position:relative;
+			left:110px;
+			top:49px;
+        }
+		#s2{
+            color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+			position:relative;
+			left:110px;
+			top:49px;
+        }
+		#namei{
+			position:relative;
+			left: 60px;
+			top:53px;
+        }
+		#s2t{
+			position:relative;
+			left:35px;
+			top:-60px;
+        }
+		#pnumf{
+            color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+            font-size: 20px;
+			position:relative;
+			left:590px;
+			top:-2px;
+        }
+		#s4{
+            color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+           
+			position:relative;
+			left:615px;
+			top:-2px;
+        }
+		#pnumi{
+			position:relative;
+			left: 560px;
+        }
+		#s4t{
+			position:relative;
+			left: 540px;
+			top:-85px;
+        }
+		#timef{
+            color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+            font-size: 20px;
+			position:relative;
+			left:1100px;
+			top:-58px;
+        }
+		
+		#s6{
+            color: rgb(212, 155, 9);
+            font-family: 'Saira Condensed';
+            
+			position:relative;
+			left:1100px;
+			top:-52px;
+        }
+		#timei{
+			position:relative;
+			left: 1088px;
+			top:-58px;
+        }
+		#s6t{
+			position:relative;
+			left: 1030px;
+			top:-107px;
+        }
+        #desc{
+            color: rgb(226, 214, 161);
+            font-family:Papyrus;
+            font-size:50px;
+
+        }
+        #menu{
+            color:rgb(196,122,2);
+            background-color: rgb(2,2,36);
+            text-align: center;
+            font-family: 'Saira Condensed';
+            font-size: 50px;
+        }
+	</style>
+</head>
+<body>
+    <div id="container">
+        <div id="bookh"></div>
+		<div id="chooseh"></div>
+        <div id="home"></div>
+	    <div id="abt"></div>
+	    <div id="book"></div>
+    </div>
+	<div id="icon"></div>
+	<div id="name"></div>
+	<div id="pnum"></div>
+    <div id="time"></div>
+	<div id="s2"></div>
+	<div id="s4"></div>
+	<div id="s6"></div>
+	<div id="s2t"></div>
+	<div id="s4t"></div>
+	<div id="s6t"></div>
+	<div id="con"></div>
+	<div id="pre"></div>
+	<script type="text/babel">
+		
+        class Icon extends React.Component {
+			render() {
+				return (
+					<>
+						<img src="C:/Users/kusum/OneDrive/Desktop/college things/sem3/webtech/proj/Estd2023-removebg-preview.png" width="150" height="150"/>
+					</>
+				)
+			}
+		}
+
+		
+
+		class Headings2 extends React.Component {
+			render() {
+				return (
+					<div>
+						<h3>{this.props.text}</h3>
+					</div>
+				);
+			}
+		}
+		
+		class Name extends React.Component {
+			render() {
+				return (
+					<div>
+						<form>
+							<label id="namef">Name</label><br></br>
+							<input type="text" name="name" id="namei" placeholder="Enter your name" />
+						</form>
+					</div>
+				);
+			}
+		}
+		
+		class Pnum extends React.Component {
+			render() {
+				return (
+					<div>
+						<form>
+							<label id="pnumf">Phone Number</label><br></br>
+							<input type="tel" name="phone" id="pnumi" placeholder="10 digit" pattern="[0-9]{10}"/>
+						</form>
+					</div>
+				);
+			}
+		}
+		class Time extends React.Component {
+			render() {
+				return (
+					<div>
+						<form>
+							<label id="timef">Time</label><br></br>
+							<input type="time" name="time" id="timei"/>
+						</form>
+					</div>
+				);
+			}
+		}
+		
+		function Inc()
+		{
+			const [count,setCount]=React.useState(0)
+		
+		
+		function incr()
+		{
+			setCount(count+1)
+		}
+		
+		function decr()
+		{
+			setCount(count-1)
+		}
+		return(
+			<div>
+			
+			
+				<button onClick={decr}>-</button>
+				<input type="number" value={count}/> 
+				<button onClick={incr}>+</button>
+			
+			
+			</div>	
+				)
+		}
+		
+		ReactDOM.render(<Icon/>, document.getElementById("icon"));
+        ReactDOM.render(<Headings2 text="Home" />, document.getElementById("home"));
+        ReactDOM.render(<Headings2 text="About Us" />, document.getElementById("abt"));
+        ReactDOM.render(<Headings2 text="Book Table" />, document.getElementById("book"));
+		ReactDOM.render(<Headings2 text="Book a Table" />, document.getElementById("bookh"));
+		ReactDOM.render(<Headings2 text="Choose Your Tables" />, document.getElementById("chooseh"));
+		ReactDOM.render(<Headings2 text="2 Seater" />, document.getElementById("s2"));
+		ReactDOM.render(<Headings2 text="4 Seater" />, document.getElementById("s4"));
+		ReactDOM.render(<Headings2 text="6 Seater" />, document.getElementById("s6"));
+		ReactDOM.render(<Headings2 text="Go To Confirmation Page" />, document.getElementById("con"));
+		ReactDOM.render(<Headings2 text="Pre-Order Here" />, document.getElementById("pre"));
+		ReactDOM.render(<Name/>, document.getElementById("name"));
+		ReactDOM.render(<Pnum/>, document.getElementById("pnum"));
+		ReactDOM.render(<Time/>, document.getElementById("time"));
+		ReactDOM.render(<Inc/>, document.getElementById("s2t"));
+		ReactDOM.render(<Inc/>, document.getElementById("s4t"));
+		ReactDOM.render(<Inc/>, document.getElementById("s6t"));
+	</script>
+</body>
+</html>
